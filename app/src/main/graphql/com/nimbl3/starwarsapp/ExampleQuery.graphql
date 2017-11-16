@@ -1,0 +1,8 @@
+query AllFilmsQuery {
+  allFilms {
+    films {
+      title,
+      episodeID
+    }
+  }
+}
