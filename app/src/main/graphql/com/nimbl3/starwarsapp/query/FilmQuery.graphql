@@ -2,7 +2,9 @@ query AllFilmsQuery {
   allFilms {
     films {
       title,
-      episodeID
+      episodeID,
+      director,
+      releaseDate
     }
   }
 }

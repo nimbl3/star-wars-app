@@ -1,0 +1,14 @@
+query AllPeopleQuery {
+  allPeople {
+    people {
+      name,
+      gender,
+      homeworld {
+        name
+      },
+      species {
+        name
+      }
+    }
+  }
+}

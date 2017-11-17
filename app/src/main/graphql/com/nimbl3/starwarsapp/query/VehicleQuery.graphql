@@ -1,0 +1,10 @@
+query AllVehiclesQuery {
+  allVehicles {
+    vehicles {
+      name,
+      model,
+      crew,
+      vehicleClass
+    }
+  }
+}

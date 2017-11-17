@@ -1,0 +1,10 @@
+query AllStarShipsQuery {
+  allStarships {
+    starships {
+      name,
+      model,
+      crew,
+      starshipClass
+    }
+  }
+}
