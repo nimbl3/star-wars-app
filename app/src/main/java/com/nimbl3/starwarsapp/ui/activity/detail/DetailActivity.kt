@@ -1,6 +1,7 @@
 package com.nimbl3.starwarsapp.ui.activity.detail
 
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import com.nimbl3.starwarsapp.R
 import com.nimbl3.starwarsapp.ui.activity.base.BaseActivity
 import com.nimbl3.starwarsapp.ui.activity.detail.fragment.films.FilmsFragment
@@ -8,6 +9,7 @@ import com.nimbl3.starwarsapp.ui.activity.detail.fragment.persons.PersonsFragmen
 import com.nimbl3.starwarsapp.ui.activity.detail.fragment.planets.PlanetsFragment
 import com.nimbl3.starwarsapp.ui.activity.detail.fragment.starships.StarshipsFragment
 import com.nimbl3.starwarsapp.ui.activity.detail.fragment.vehicles.VehiclesFragment
+import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : BaseActivity() {
 
@@ -15,10 +17,23 @@ class DetailActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        supportActionBar?.apply {
-            setHomeButtonEnabled(true)
-            setDisplayHomeAsUpEnabled(true)
+        setSupportActionBar(toolbar)
+
+        val side = intent.getStringExtra("side") ?: "Jedi"
+
+
+
+        when (side) {
+            "Jedi" -> {
+                toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+                toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.black))
+            }
+            "Sith" -> {
+                toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+                toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
+            }
         }
+
 
         val page = intent.let { it.getIntExtra("page", 0) }
 

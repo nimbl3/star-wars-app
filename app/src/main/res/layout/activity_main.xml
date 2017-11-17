@@ -1,138 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_height="match_parent">
     
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/tbFake"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        tools:background="#ffffff">
         
-        <FrameLayout
-            android:id="@+id/flFilms"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic_films" />
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="#80000000" />
-            
-            <TextView
-                style="@style/MainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Films" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/ivLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            tools:src="@drawable/ic_starwar_black"/>
         
-        </FrameLayout>
-        
-        <FrameLayout
-            android:id="@+id/flPlanets"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic_planets" />
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="#80000000" />
-            
-            <TextView
-                style="@style/MainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Planets" />
-        
-        </FrameLayout>
-        
-        <FrameLayout
-            android:id="@+id/flPersons"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic_persons" />
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="#80000000" />
-            
-            <TextView
-                style="@style/MainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Persons" />
-        
-        </FrameLayout>
-        
-        <FrameLayout
-            android:id="@+id/flStarships"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic_starships" />
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="#80000000" />
-            
-            <TextView
-                style="@style/MainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Starships" />
-        
-        </FrameLayout>
-        
-        <FrameLayout
-            android:id="@+id/flVehicles"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pic_vehicles" />
-            
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="#80000000" />
-            
-            <TextView
-                style="@style/MainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Vehicles" />
-        
-        </FrameLayout>
+    </FrameLayout>
     
-    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <FrameLayout
+                android:id="@+id/flFilms"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_films" />
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#80000000" />
+                
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Films" />
+            
+            </FrameLayout>
+            
+            <FrameLayout
+                android:id="@+id/flPlanets"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_planets" />
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#80000000" />
+                
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Planets" />
+            
+            </FrameLayout>
+            
+            <FrameLayout
+                android:id="@+id/flPersons"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_persons" />
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#80000000" />
+                
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Persons" />
+            
+            </FrameLayout>
+            
+            <FrameLayout
+                android:id="@+id/flStarships"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_starships" />
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#80000000" />
+                
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Starships" />
+            
+            </FrameLayout>
+            
+            <FrameLayout
+                android:id="@+id/flVehicles"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pic_vehicles" />
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="#80000000" />
+                
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Vehicles" />
+            
+            </FrameLayout>
+        
+        </LinearLayout>
+    
+    </ScrollView>
 
-</ScrollView>
+</LinearLayout>

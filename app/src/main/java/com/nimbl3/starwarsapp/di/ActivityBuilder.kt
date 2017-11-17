@@ -4,6 +4,7 @@ import com.nimbl3.starwarsapp.ui.activity.detail.DetailActivity
 import com.nimbl3.starwarsapp.ui.activity.detail.di.DetailFragmentProvider
 import com.nimbl3.starwarsapp.ui.activity.main.di.MainActivityModule
 import com.nimbl3.starwarsapp.ui.activity.main.MainActivity
+import com.nimbl3.starwarsapp.ui.activity.side.SideActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -14,6 +15,8 @@ abstract class ActivityBuilder {
     abstract fun bindMainActivity(): MainActivity
 
     @ContributesAndroidInjector(modules = arrayOf(DetailFragmentProvider::class))
-    abstract fun bindDetailActivity() : DetailActivity
+    abstract fun bindDetailActivity(): DetailActivity
 
+    @ContributesAndroidInjector
+    abstract fun bindSideActivity(): SideActivity
 }

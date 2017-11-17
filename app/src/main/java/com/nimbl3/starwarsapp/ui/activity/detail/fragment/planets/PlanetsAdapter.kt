@@ -34,7 +34,7 @@ class PlanetsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(planet: Planet) {
         tvItemPlanetName.text = planet.name()
-        tvItemPlanetDiameter.text = planet.diameter().toString()
-        tvItemPlanetPopulation.text = planet.population().toString()
+        tvItemPlanetDiameter.text = "Diameter: ${planet.diameter().toString()} km"
+        tvItemPlanetPopulation.text = "Population: ${planet.population() ?: "unknown"}"
     }
 }

@@ -31,12 +31,10 @@ class FilmsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvItemFilmName: TextView = itemView.tvItemFilmName
     private val tvItemFilmId: TextView = itemView.tvItemFilmId
     private val tvItemFilmDirector: TextView = itemView.tvItemFilmDirector
-    private val tvItemFilmReleaseDate: TextView = itemView.tvItemFilmReleaseDate
 
     fun bind(film: Film) {
         tvItemFilmName.text = film.title()
-        tvItemFilmId.text = film.episodeID().toString()
-        tvItemFilmDirector.text = film.director()
-        tvItemFilmReleaseDate.text = film.releaseDate()
+        tvItemFilmId.text = "Episode: ${film.episodeID()}  |  ${film.releaseDate()}"
+        tvItemFilmDirector.text = "Director: ${film.director()}"
     }
 }

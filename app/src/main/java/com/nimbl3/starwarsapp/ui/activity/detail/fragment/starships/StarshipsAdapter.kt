@@ -34,8 +34,8 @@ class StarshipsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(starship: Starship) {
         tvItemStarshipName.text = starship.name()
-        tvItemStarshipModel.text = starship.model()
-        tvItemStarshipCrew.text = starship.crew()
-        tvItemStarshipClass.text = starship.starshipClass()
+        tvItemStarshipModel.text = "Model: ${starship.model()}"
+        tvItemStarshipCrew.text = "Crew: ${starship.crew()}"
+        tvItemStarshipClass.text = "Class: ${starship.starshipClass()}"
     }
 }

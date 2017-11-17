@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.apollographql.apollo.rx2.Rx2Apollo
 import com.nimbl3.starwarsapp.R
 import com.nimbl3.starwarsapp.query.AllVehiclesQuery
@@ -35,7 +36,7 @@ class VehiclesFragment : BaseFragment() {
                 .subscribe({
                     vehiclesAdapter.vehicles = it
                 }, {
-                    Log.i("call", "fail")
+                    Toast.makeText(context,"Call Failed.", Toast.LENGTH_SHORT).show()
                 })
     }
 }

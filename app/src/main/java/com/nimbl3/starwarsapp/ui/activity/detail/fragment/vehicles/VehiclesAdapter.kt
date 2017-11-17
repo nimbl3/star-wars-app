@@ -34,8 +34,8 @@ class VehiclesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(vehicle: Vehicle) {
         tvItemVehicleName.text = vehicle.name()
-        tvItemVehicleModel.text = vehicle.model()
-        tvItemVehicleCrew.text = vehicle.crew()
-        tvItemVehicleClass.text = vehicle.vehicleClass()
+        tvItemVehicleModel.text = "Model: ${vehicle.model()}"
+        tvItemVehicleCrew.text = "Crew: ${vehicle.crew()}"
+        tvItemVehicleClass.text = "Class: ${vehicle.vehicleClass()}"
     }
 }

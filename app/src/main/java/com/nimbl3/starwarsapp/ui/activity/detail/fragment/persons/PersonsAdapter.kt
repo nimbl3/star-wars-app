@@ -34,8 +34,8 @@ class PersonsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(person: person) {
         tvItemPersonName.text = person.name()
-        tvItemPersonGender.text = person.gender()
-        tvItemPersonHomeWorld.text = person.homeworld()?.name() ?: "-"
-        tvItemPersonSpecies.text = person.species()?.name() ?: "-"
+        tvItemPersonGender.text = "Gender: ${person.gender()}"
+        tvItemPersonHomeWorld.text = "HomeWorld: ${person.homeworld()?.name() ?: "unknown"}"
+        tvItemPersonSpecies.text = "Species: ${person.species()?.name() ?: "unknown"}"
     }
 }

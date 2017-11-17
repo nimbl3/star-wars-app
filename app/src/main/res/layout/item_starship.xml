@@ -16,21 +16,27 @@
         <TextView
             android:id="@+id/tvItemStarshipName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
         
         <TextView
             android:id="@+id/tvItemStarshipModel"
             android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_height="wrap_content" />
         
         <TextView
             android:id="@+id/tvItemStarshipCrew"
             android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_height="wrap_content" />
         
         <TextView
             android:id="@+id/tvItemStarshipClass"
             android:layout_width="wrap_content"
+            android:textColor="@color/black"
             android:layout_height="wrap_content" />
     
     </LinearLayout>
